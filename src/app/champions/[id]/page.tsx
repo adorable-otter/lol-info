@@ -1,4 +1,4 @@
-import { fetchChampionDetail } from '@/utils/fetchChampions';
+import { fetchChampionDetail } from '@/api/fetchChampions';
 import React from 'react';
 import ChampionDetailCard from './_components/ChampionDetailCard';
 
@@ -11,7 +11,7 @@ const ChampionDetailPage = async ({ params }: ChampionDetailPageProps) => {
 
   return (
     <div>
-      <ChampionDetailCard champion={championDetail} />{' '}
+      <ChampionDetailCard champion={championDetail} />
     </div>
   );
 };
