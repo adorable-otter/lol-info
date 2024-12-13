@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { ChampionDetail } from '@/types/ChampionDetail';
 
