@@ -22,17 +22,23 @@ export const fetchChampions = async (): Promise<Champion[]> => {
   }
 };
 
-export const fetchChampionDetail = async (id: Champion['id']): Promise<ChampionDetail | null> => {
-  try {
-    const response = await fetch(
-      `https://ddragon.leagueoflegends.com/cdn/${process.env.NEXT_PUBLIC_DATA_DRAGON_VURSION}/data/ko_KR/champion/${id}.json`,
-      { cache: 'no-store' }
-    );
-    if (!response.ok) throw new Error('');
-    const data = await response.json();
-    return data.data[id];
-  } catch (error) {
-    console.log((error as Error).message);
-    return null;
-  }
+export const fetchChampionDetail = async (id: Champion['id']): Promise<ChampionDetail> => {
+  const response = await fetch(
+    `https://ddragon.leagueoflegends.com/cdn/${process.env.NEXT_PUBLIC_DATA_DRAGON_VURSION}/data/ko_KR/champion/${id}.json`,
+    { cache: 'no-store' }
+  );
+  if (!response.ok) throw new Error('');
+  const data = await response.json();
+  return data.data[id];
+};
+
+export const slowDetail = async (id: Champion['id']): Promise<ChampionDetail> => {
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  const response = await fetch(
+    `https://ddragon.leagueoflegends.com/cdn/${process.env.NEXT_PUBLIC_DATA_DRAGON_VURSION}/data/ko_KR/champion/${id}.json`,
+    { cache: 'no-store' }
+  );
+  if (!response.ok) throw new Error('');
+  const data = await response.json();
+  return data.data[id];
 };
