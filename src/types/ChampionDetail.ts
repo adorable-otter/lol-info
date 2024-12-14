@@ -3,7 +3,7 @@ export type ChampionDetail = {
   key: string;
   name: string;
   title: string;
-  image: ChampionImage;
+  image: ContentImage;
   skins: ChampionSkin[];
   lore: string;
   blurb: string;
@@ -21,7 +21,7 @@ export type ChampionDetail = {
   passive: {
     name: string;
     description: string;
-    image: ChampionImage;
+    image: ContentImage;
   };
   recommended: [];
 };
@@ -55,11 +55,11 @@ type ChampionSpell = {
   maxammo: string;
   range: number[];
   rangeBurn: string;
-  image: ChampionImage;
+  image: ContentImage;
   resource: string;
 };
 
-type ChampionImage = {
+export type ContentImage = {
   full: string;
   sprite: string;
   group: string;
