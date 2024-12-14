@@ -1,6 +1,12 @@
 import ItemCard from '@/components/ItemCard';
 import { Item } from '@/types/Item';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'LOL Items',
+  description: 'introduces information about all lol items',
+};
 
 const ItemsPage = async () => {
   const fetchItems = async (): Promise<Item[]> => {

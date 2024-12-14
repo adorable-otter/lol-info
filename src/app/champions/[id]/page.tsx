@@ -1,6 +1,14 @@
 import React from 'react';
 import ChampionDetailCard from './_components/ChampionDetailCard';
 import { fetchChampionDetail } from '@/api/champions';
+import { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  return {
+    title: 'Champion ' + params.id,
+    description: `introduces information about ${params.id}`,
+  };
+}
 
 type ChampionDetailPageProps = { params: { id: string } };
 

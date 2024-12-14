@@ -13,6 +13,7 @@ const RotationPage = () => {
   } = useQuery({
     queryKey: ['rotationChampions'],
     queryFn: fetchRotationChampions,
+    staleTime: 1000 * 60 * 5,
   });
 
   if (isPending) return <div>loading...</div>;
