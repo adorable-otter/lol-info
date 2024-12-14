@@ -1,5 +1,5 @@
+import { fetchChampions } from '@/api/champions';
 import ChampionCard from '@/components/ChampionCard';
-import { fetchChampions } from '@/api/fetchChampions';
 import React from 'react';
 
 // ISR

@@ -1,6 +1,6 @@
 'use client';
 
-import { fetchRotationChampions } from '@/api/fetchRotationChampions';
+import { fetchRotationChampions } from '@/api/rotation';
 import ChampionCard from '@/components/ChampionCard';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';

@@ -1,6 +1,6 @@
-import { fetchChampionDetail } from '@/api/fetchChampions';
 import React from 'react';
 import ChampionDetailCard from './_components/ChampionDetailCard';
+import { fetchChampionDetail } from '@/api/champions';
 
 type ChampionDetailPageProps = { params: { id: string } };
 
