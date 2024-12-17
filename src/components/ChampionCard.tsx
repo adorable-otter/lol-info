@@ -7,8 +7,8 @@ import Link from 'next/link';
 type ChampionCardProps = { champion: Champion };
 const ChampionCard = ({ champion }: ChampionCardProps) => {
   return (
-    <Link href={`/champions/${champion.id}`}>
-      <Card className="w-[250px] bg-inherit">
+    <Link className='flex w-2/5 md:w-1/4 lg:w-1/5' href={`/champions/${champion.id}`}>
+      <Card className="w-full bg-inherit">
         <CardContent className="flex flex-col gap-2">
           <Image
             className="self-center mb-4 mt-7"

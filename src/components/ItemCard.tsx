@@ -6,7 +6,7 @@ import { Item } from '@/types/Item';
 type ItemCardProps = { item: Item };
 const ItemCard = ({ item }: ItemCardProps) => {
   return (
-    <Card className="w-[250px] bg-inherit">
+    <Card className="w-2/5 md:w-1/4 lg:w-1/5 bg-inherit">
       <CardContent className="flex flex-col gap-2">
         <Image
           className="self-center mb-4 mt-7"
