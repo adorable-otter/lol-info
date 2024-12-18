@@ -23,3 +23,12 @@ export type Champion = {
     [key: string]: number;
   };
 };
+
+export type ChampionsResponse = {
+  type: string;
+  format: string;
+  version: string;
+  data: {
+    [key:string]: Champion;
+  };
+};

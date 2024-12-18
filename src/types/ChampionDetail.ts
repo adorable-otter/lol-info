@@ -68,3 +68,10 @@ export type ContentImage = {
   w: number;
   h: number;
 };
+
+export type ChampionDetailResponse = {
+  type: string;
+  format: string;
+  version: string;
+  data: { [key: string]: ChampionDetail };
+};

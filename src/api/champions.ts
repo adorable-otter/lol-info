@@ -1,7 +1,7 @@
 'use server';
 
-import { Champion } from '@/types/Champion';
-import { ChampionDetail } from '@/types/ChampionDetail';
+import { Champion, ChampionsResponse } from '@/types/Champion';
+import { ChampionDetail, ChampionDetailResponse } from '@/types/ChampionDetail';
 
 export const fetchChampions = async (): Promise<Champion[]> => {
   try {
@@ -14,7 +14,7 @@ export const fetchChampions = async (): Promise<Champion[]> => {
       }
     );
     if (!response.ok) throw new Error('');
-    const data = await response.json();
+    const data:ChampionsResponse = await response.json();
     return Object.values(data.data);
   } catch (error) {
     console.log((error as Error).message);
@@ -28,7 +28,7 @@ export const fetchChampionDetail = async (id: Champion['id']): Promise<ChampionD
     { cache: 'no-store' }
   );
   if (!response.ok) throw new Error('');
-  const data = await response.json();
+  const data:ChampionDetailResponse = await response.json();
   return data.data[id];
 };
 
@@ -39,6 +39,6 @@ export const slowDetail = async (id: Champion['id']): Promise<ChampionDetail> =>
     { cache: 'no-store' }
   );
   if (!response.ok) throw new Error('');
-  const data = await response.json();
+  const data:ChampionDetailResponse = await response.json();
   return data.data[id];
 };
