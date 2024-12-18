@@ -11,7 +11,7 @@ const Navigation = () => {
     closeModal();
   };
   return (
-    <nav className="flex flex-col sm:flex-row items-center gap-5 text-center w-full text-white">
+    <nav className="flex flex-col sm:flex-row items-center gap-5 text-center w-full">
       <Link onClick={handleLinkClick} className="w-1/4" href={'/'}>
         홈
       </Link>

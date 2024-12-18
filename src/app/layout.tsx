@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Providers from './providers';
 import Modal from '@/components/Modal';
+import { ThemeProvider } from '@/components/ui/ThemeProvider';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -29,8 +30,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased pt-14 w-full`}>
-        <Header />
-        <Providers>{children}</Providers>
+        <Providers>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+          </ThemeProvider>
+        </Providers>
         <Modal />
       </body>
     </html>
