@@ -15,8 +15,8 @@ const ItemCard = ({ item }: ItemCardProps) => {
           height={150}
           alt={item.name}
         ></Image>
-        <h2 className="text-2xl font-bold">{item.name}</h2>
-        <p className="text-gray-500">{item.plaintext}</p>
+        <h2 className="text-2xl font-bold break-all">{item.name}</h2>
+        <p className="text-gray-500 break-all">{item.plaintext}</p>
       </CardContent>
     </Card>
   );
