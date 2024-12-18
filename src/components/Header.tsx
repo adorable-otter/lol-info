@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
 import Navigation from './Navigation';
 import useModalStore from '@/stores/useModalStore';
 import { useTheme } from 'next-themes';
@@ -25,12 +24,13 @@ const Header = () => {
       <div className="hidden sm:flex w-4/5">
         <Navigation />
       </div>
-      <button className='ml-auto mr-5'
+      <button
+        className="ml-auto mr-5"
         onClick={() => {
           setTheme(theme === 'dark' ? 'light' : 'dark');
         }}
       >
-        {theme![0].toUpperCase() + theme!.slice(1)}
+        {theme && theme[0].toUpperCase() + theme.slice(1)}
       </button>
     </header>
   );
