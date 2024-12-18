@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Providers from '../providers';
 
 export const metadata: Metadata = {
   title: 'LOL Rotation champions',
@@ -7,9 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function RotationLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <section>
-      <Providers>{children}</Providers>
-    </section>
-  );
+  return <section>{children}</section>;
 }

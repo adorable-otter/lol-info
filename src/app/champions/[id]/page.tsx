@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import ChampionDetailCard from './_components/ChampionDetailCard';
-import { fetchChampionDetail } from '@/api/champions';
+import { fetchChampionDetail } from '@/actions/champions';
 import { Metadata } from 'next';
 import Loading from '@/app/loading';
 import DetailCardSlow from './_components/DetailCardSlow';

@@ -1,10 +1,17 @@
 'use client';
 
-import { fetchRotationChampions } from '@/api/rotation';
 import ChampionCard from '@/components/ChampionCard';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import Loading from '../loading';
+import { Champion } from '@/types/Champion';
+
+const fetchRotationChampions = async (): Promise<Champion[]> => {
+  const response = await fetch('/api/rotation');
+  if (!response.ok) throw Error('');
+  const data = await response.json();
+  return data.rotationChampions;
+};
 
 const RotationPage = () => {
   const {
@@ -24,7 +31,7 @@ const RotationPage = () => {
   return (
     <div>
       <h1 className="text-4xl text-center mt-14 mb-14">
-        챔피언 로테이션{' '}
+        챔피언 로테이션
         <span className="hidden lg:inline">(이번 주 무료로 플레이 할 수 있어요!)</span>
       </h1>
       <div className="flex flex-wrap justify-center gap-5">

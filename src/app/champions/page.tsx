@@ -1,4 +1,4 @@
-import { fetchChampions } from '@/api/champions';
+import { fetchChampions } from '@/actions/champions';
 import ChampionCard from '@/components/ChampionCard';
 import { Metadata } from 'next';
 import React from 'react';

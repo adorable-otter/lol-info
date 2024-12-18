@@ -1,4 +1,4 @@
-import { fetchChampions } from '@/api/champions';
+import { fetchChampions } from '@/actions/champions';
 import { NextResponse } from 'next/server';
 
 export async function GET() {

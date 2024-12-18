@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
-import { slowDetail } from '@/api/champions';
+import { slowDetail } from '@/actions/champions';
 
 const DetailCardSlow = async ({ id }: { id: string }) => {
   // 시간 지연용 fetch 로직
