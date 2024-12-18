@@ -28,7 +28,7 @@ const RotationPage = () => {
         <span className="hidden lg:inline">(이번 주 무료로 플레이 할 수 있어요!)</span>
       </h1>
       <div className="flex flex-wrap justify-center gap-5">
-        {rotationChampions.map((champion) => (
+        {rotationChampions?.map((champion) => (
           <ChampionCard key={champion.id} champion={champion} />
         ))}
       </div>
